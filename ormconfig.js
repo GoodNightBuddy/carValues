@@ -29,7 +29,13 @@ switch (process.env.NODE_ENV) {
 
   case 'production':
     Object.assign(config, {
-      // e.g. postgres config later
+      type: 'postgres',
+      url: process.env.DATABASE_URL, // Render gives you this
+      synchronize: false,
+      migrationsRun: true,
+      ssl: {
+        rejectUnauthorized: false,
+      },
     });
     break;
 
