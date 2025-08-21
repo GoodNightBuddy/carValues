@@ -56,7 +56,7 @@ module.exports = class InitialSchema1755710891111 {
           { name: 'lat', type: 'integer', isNullable: false },
           { name: 'mileage', type: 'integer', isNullable: false },
           { name: 'approved', type: 'boolean', default: false },
-          { name: 'userId', type: 'varchar', isNullable: true },
+          { name: 'userId', type: 'uuid', isNullable: true },
         ],
       }),
     );
